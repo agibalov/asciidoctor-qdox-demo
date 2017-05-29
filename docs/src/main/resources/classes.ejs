@@ -1,0 +1,11 @@
+<% load('classpath:utils.js');
+var classes = getClasses();
+for each (var clazz in classes) {
+    if(shouldSkip(clazz)) continue; %>
+
+* `<%= clazz.getName() %>` -- <%= clazz.getComment() %>
+
+    <% for each (var method in clazz.getMethods()) { %>
+** `<%= method.getName() %>()` -- <%= method.getComment() %>
+    <% } %>
+<% } %>

@@ -1,0 +1,3 @@
+rootProject.name = 'asciidoctor-qdox-demo'
+include 'sample-app'
+include 'docs'

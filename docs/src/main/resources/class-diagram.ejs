@@ -1,0 +1,19 @@
+[plantuml, class-diagram, svg]
+----
+<% load('classpath:utils.js');
+var classes = getClasses();
+for each (var clazz in classes) {
+    if(shouldSkip(clazz)) continue; %>
+class <%= clazz.getName() %>
+<% } %>
+
+<%
+for each (var clazz in classes) {
+    if(shouldSkip(clazz)) continue;
+
+    for each (var field in clazz.getFields()) {
+        if(shouldSkip(field.getType())) continue; %>
+<%= clazz.getName() %> --> <%= field.getType().getName() %>
+    <% }
+} %>
+----

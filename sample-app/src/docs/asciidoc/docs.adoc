@@ -1,0 +1,9 @@
+= Sample App docs
+
+== Classes
+Sample App has a few classes:
+include::{snippetsDir}/classes.adoc[]
+== Class diagram
+Here's how Sample App's classes connected with each other:
+include::{snippetsDir}/class-diagram.adoc[]
+The end.
